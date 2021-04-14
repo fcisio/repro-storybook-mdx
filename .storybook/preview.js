@@ -1,3 +1,10 @@
+const mainDecorators = (Story, context) => {
+  return (
+    <div>
+      <Story {...context} />
+    </div>
+  );
+};
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,4 +14,6 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+
+export const decorators = [mainDecorators];

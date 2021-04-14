@@ -5,7 +5,9 @@ import {
   Title,
   Description,
   ArgsTable,
+  Source,
 } from "@storybook/addon-docs/blocks";
+import dedent from "ts-dedent";
 import { Button } from "./Button";
 
 <Meta
@@ -45,6 +47,15 @@ Markdown documentation.
 </Canvas>
 
 <ArgsTable />
+
+<Source
+  language="jsx"
+  code={dedent`
+    <ColorSwitch variant="badge" />
+    <ColorSwitch variant="badge" whitelist={['light', 'dark']} />
+    <ColorSwitch variant="badge" whitelist={['light', 'dark']} inclusive />
+  `}
+/>
 
 <Canvas>
   <Story
