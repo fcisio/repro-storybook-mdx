@@ -14,6 +14,7 @@ module.exports = {
         "@babel/preset-react",
         {
           runtime: "automatic",
+          // importSource: "react",
         },
         "preset-react-jsx-transform", // Can name this anything, just an arbitrary alias to avoid duplicate presets'
       ],
